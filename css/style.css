@@ -1,0 +1,45 @@
+
+body {
+	display: grid;
+	grid-template-rows: auto 1fr auto;
+	grid-template-columns: 1fr 2fr;
+	grid-template-areas:
+	"nav nav nav"
+	"aside main main"
+	"ftr ftr ftr";
+	min-height: 100vh;
+	background-color: lightcoral;
+	margin: 0;
+	padding: 0;
+}
+
+aside {
+	background-color: azure;
+	grid-area: aside;
+}
+
+main {
+	background-color: burlywood;
+	grid-area: main;
+}
+
+nav {
+	grid-area: nav;
+}
+
+footer {
+	background-color: darkgoldenrod;
+	grid-area: ftr;
+}
+
+nav,
+footer {
+	grid-column: span 2;
+	height: 60px;
+}
+
+.flex-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
